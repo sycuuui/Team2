@@ -1,0 +1,104 @@
+html,
+body {
+  background: white
+}
+
+.outer {
+  width: 390px;
+  height: 800px;
+  background: #D9C08C
+}
+
+
+.board_img {
+  margin-top: 6%;
+}
+
+
+p {
+  color: #6A3D09;
+  font-weight: 400;
+  font-family: 'Noto Serif KR', serif;
+}
+
+
+/* 칠판안에 사진 */
+.main_image {
+  position: relative;
+}
+
+.main_image_text {
+  font-family: 'Gugi', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(5%, -65%);
+  color: white;
+}
+
+.main_image_img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-90%, -40%);
+  color: white;
+}
+/* 칠판안에 사진 */
+
+
+
+/* 가운데 정렬 */
+.outer {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* 가운데 정렬 */
+
+
+
+
+/* 버튼1 */
+a,
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a.button {
+  font-family: 'Noto Serif KR', serif;
+  display: block;
+  position: relative;
+  margin-top: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-weight: 700;
+  font-size: small;
+  text-align: center;
+  line-height: 42px;
+  /* 글자색 */
+  color: #6D4D0B;
+  border-radius: 18px;
+  transition: all 0.2s;
+}
+
+.btnBlueGreen.btnPush {
+  /* 그림자 */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btnPush:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btnBlueGreen.btnPush:hover {
+  /* 그림자 */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btnBlueGreen {
+  background: #FCEED2;
+}
+
+/* 버튼1 */
