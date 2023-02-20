@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+@media(min-width:390px){
+    body{
+        background-color: #D9C08C;
+    }
+}
+#intro{
+    background-color: #D9C08C;
+    width: 390px;
+    height: 844px;
+    margin: 0 auto;
+}
+
+hr{
+    width: 390px;
+    height: 12px;
+}
+/* 맨 위 라인*/
+.line-top{
+    background-color: #5B3408;
+}
+/* 맨 위 이미지*/
+#intro-main-img{
+    float: left;
+    position: relative;
+
+}
+#intro-main-img #main{
+    width: 180px;
+    height: 180px;
+    /* position: absolute; */
+    padding-top: 30px;
+    padding-left: 105px;
+    padding-bottom: 21px;
+}
+#intro-main-img #blossom{
+    width: 390px;
+    height: 230px;
+    position: absolute;
+    margin-left: 10px;
+}
+/*위에 있는 설명*/ 
+#intro-explain-top{
+    clear: left;
+    margin-top: 37px;
+    color: #6A3D09;
+    font-family: 'Noto Serif KR', serif;
+}
+/*인물 이미지 위 3개*/
+#intro-img-top{
+    margin-top: 16px;
+    margin-left: 40px;
+}
+#intro-img-top img{
+    width: 100.34px;
+    height: 138px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+/*인물 이미지 아래 3개*/
+#intro-img-bottom{
+    margin-top: 37px;
+    margin-right: 40px;
+    font-family: 'Noto Serif KR', serif;
+}
+#intro-img-bottom img{
+    width: 100.34px;
+    height: 138px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+/*아래에 있는 설명*/ 
+#intro-explain-bottom{
+    margin-top: 21px;
+    color: #6A3D09;
+}
+/*버튼*/
+#intro-next-btn{
+    margin-top: 15px;
+}
+#intro-next-btn img{
+    width: 41px;
+    height: 41px;
+    cursor: pointer;
+}
+/* 맨 아래 라인*/
+.line-bottom{
+    background-color: #795610;
+    margin-top: 22px;
+}
+
+.f1{
+    width: 20px;
+    height: 16px;
+}
