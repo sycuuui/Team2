@@ -10,8 +10,14 @@ def showintro(request):
 def showintro2(request):
     return render(request, 'myapp/intro2.html')
 
-def showuniv(request):
-    return render(request, 'myapp/univ.html')
+def showuniv_1(request):
+    return render(request, 'myapp/univ_1.html')
+
+def showuniv_2(request):
+    return render(request, 'myapp/univ_2.html')
+
+def showuniv_3(request):
+    return render(request, 'myapp/univ_3.html')
 
 def showprob1(request):
     return render(request, 'myapp/prob1.html')
