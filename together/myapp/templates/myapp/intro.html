@@ -1,12 +1,53 @@
-<h2>
-    함께 걸음은 다가오는 3.1절을 맞이하여, 
-    독립운동을 위해 힘써주신 위인들을
-    기억하기 위한 프로젝트입니다.
-</h2>
-<br>
-<h2>
-    우리 나라를 위해 노력하신 독립운동가들을
-    기억하기 위한 퀴즈들을 풀고, 3.1운동을 위한
-    태극기를 모아보세요!
-</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="introStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <script src="changeImg.js"></script>
+    <title>Document</title>
+</head>
+<body onload="changeImage()">
+    <div id="intro">
+        
+        <div class="line-top" ><hr></div>
+        <div id="intro-main-img">
+            <img id="blossom" src="">
+            <img id="main" src="img/intro-main-img.png">
+        </div>
+        <div id="intro-explain-top">
+            함께 걸음은 다가오는 3.1절을 맞이하여,<br>
+            독립운동을 위해 힘써주신 위인들을<br>
+            기억하기 위한 프로젝트 입니다.<br>
+
+        <div id="intro-img-top">
+            <img src="img/top-1.png">
+            <img src="img/top-2.png">
+            <img src="img/top-3.png">
+        </div>
+
+        <div id="intro-img-bottom">
+            <img src="img/bottom-1.png">
+            <img src="img/bottom-2.png">
+            <img src="img/bottom-3.png">
+        </div>
+
+        <div id="intro-explain-bottom">
+            우리나라를 위해 노력하신 독립운동가들을<br>
+                기억하기 위한 퀴즈들을 풀고, <br>
+                3.1운동을 위한 태극기를 모아보세요!
+        </div>
+
+        <div id="intro-next-btn">
+            <img src="img/next-btn.png">
+        </div>
+
+        <div class="line-bottom" ><hr></div>
+    </div>
+</body>
+</html>
 <a href="{% url 'showintro2' %}">다음</button>
