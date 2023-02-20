@@ -25,6 +25,6 @@ urlpatterns = [
     path('univ_1/', views.showuniv_1, name="showuniv_1"),
     path('univ_2/', views.showuniv_2, name="showuniv_2"),
     path('univ_3/', views.showuniv_3, name="showuniv_3"),
-    path('prob1/', views.showprob1, name="showprob1"),
+    path('prob/', views.showprob, name="showprob"),
     path('participate/', views.showparticipate, name="showparticipate")
 ]

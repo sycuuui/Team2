@@ -19,8 +19,8 @@ def showuniv_2(request):
 def showuniv_3(request):
     return render(request, 'myapp/univ_3.html')
 
-def showprob1(request):
-    return render(request, 'myapp/prob1.html')
+def showprob(request):
+    return render(request, 'myapp/prob.html')
 
 def showparticipate(request):
     return render(request, 'myapp/participate.html')
