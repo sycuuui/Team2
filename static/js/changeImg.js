@@ -10,7 +10,7 @@ function changeImage(){
         var objImg = document.getElementById("blossom");
         objImg.src=imgArray[count];
         count++;
-        if(count>5){
+        if(count>3){
             count=0;
         }
         setTimeout(changeImage,500);
