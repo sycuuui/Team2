@@ -29,6 +29,19 @@ p {
   font-family: 'Noto Serif KR', serif;
 }
 
+/* 버튼 안에 있는 태극기 */
+.korea {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+/* 버튼 안에 글자 */
+.btnfont {
+  margin-right: 10px;
+}
 
 
 /* 칠판안에 사진 */
