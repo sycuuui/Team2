@@ -13,15 +13,9 @@
     width: 390px;
     height: 844px;
     margin: 0 auto;
-}
+    border-top: 12px solid #5b3408;
+    border-bottom: 12px solid #795610;
 
-hr{
-    width: 390px;
-    height: 12px;
-}
-/* 맨 위 라인*/
-.line-top{
-    background-color: #5B3408;
 }
 /* 맨 위 이미지*/
 #intro-main-img{
@@ -46,7 +40,7 @@ hr{
 /*위에 있는 설명*/ 
 #intro-explain-top{
     clear: left;
-    margin-top: 37px;
+    margin-top: 40px;
     color: #6A3D09;
     font-family: 'Noto Serif KR', serif;
 }
@@ -78,19 +72,15 @@ hr{
 }
 /*버튼*/
 #intro-next-btn{
-    margin-top: 15px;
+    margin-top: 30px;
+    border: none;
+    background-color: #D9C08C;
 }
 #intro-next-btn img{
     width: 41px;
     height: 41px;
     cursor: pointer;
 }
-/* 맨 아래 라인*/
-.line-bottom{
-    background-color: #795610;
-    margin-top: 22px;
-}
-
 .f1{
     width: 20px;
     height: 16px;

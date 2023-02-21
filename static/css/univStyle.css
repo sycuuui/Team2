@@ -13,18 +13,12 @@
     height: 844px;
     text-align: center;
     margin: 0 auto;
+    border-top: 12px solid #5b3408;
+    border-bottom: 12px solid #795610;
 }
-
-hr{
-    width: 390px;
-    height: 12px;
-    margin-bottom: 45px;
+.school-box{
+    margin-top: 30px;
 }
-/* 맨 위 라인*/
-.line-top{
-    background-color: #5B3408;
-}
-
 .school-univ,#school-page-btn{
     display: flex;
     justify-content: center;
@@ -45,6 +39,7 @@ hr{
     border-radius: 20px;
     margin-top: 45px;
     cursor: pointer;
+    border: none;
 }
 
 .school-univ-name-box img{
@@ -83,8 +78,7 @@ hr{
 #school-page-btn img:hover{
     cursor: pointer;
 }
-
-.line-bottom{
-    background-color: #795610;
-    margin-top: 32px;
+#school-page-btn button{
+    border: none;
+    background-color: #D9C08C;
 }
