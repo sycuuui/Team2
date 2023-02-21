@@ -1,11 +1,54 @@
-<h2>
-    태극기는 모인 수만큼 학교별로 표시되어, 
-    얼마나 많은 학생들이 맞추었는지 보여줍니다.
-</h2>
-<br>
-<h2>
-    독립운동에 대하여 가장 잘 알고 있는
-    학교는 과연 어느 곳일까요?
-</h2>
-<a href="{% url 'showuniv_1' %}">함께할 대학교 선택하기</button><br>
-<a href="{% url 'showparticipate' %}">대학교 참여율 확인하기</button>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소개이후</title>
+
+    <!-- p 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <!-- p 폰트 -->
+
+    <!-- 130 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <!-- 130 폰트 -->
+
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="./afterIntroStyle.css">
+    <!-- css 연결 -->
+
+</head>
+
+<body>
+
+    <div class="outer">
+
+        <div class="main_image">
+            <img src="./view2.png" class="board_img">
+            <img src="./korea.png" class="main_image_img">
+
+            <h1 class="main_image_text" style="font-size:25px">X 130</h1>
+        </div>
+
+
+        <p>태극기는 모인 수만큼 학교별로 표시되어,<br>얼마나 많은 학생들이 맞추었는지 보여줍니다.</p>
+        <img src="./view1.png">
+
+        <p>독립운동에 대하여 가장 잘 알고 있는<br>학교는 과연 어느 곳일까요?</p>
+
+        <a href="{% url 'showuniv_1' %}" title="Button push blue/green" class="button btnPush btnBlueGreen">함께할 대학교 선택하기</a>
+        <a href="{% url 'showparticipate' %}" title="Button push blue/green" class="button btnPush btnBlueGreen">대학교 참여율 확인하기</a>
+
+
+    </div>
+
+</body>
+
+</html>
+
