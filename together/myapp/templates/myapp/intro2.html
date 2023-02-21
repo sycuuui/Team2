@@ -20,7 +20,7 @@
     <!-- 130 폰트 -->
 
     <!-- css 연결 -->
-    <link rel="stylesheet" type="text/css" href="../../../../static/css/afterIntroStyle.css">
+    <link rel="stylesheet" href="./afterIntroStyle.css">
     <!-- css 연결 -->
 
 </head>
@@ -47,11 +47,21 @@
 
         <br>
 
-        <a href="{% url 'showuniv_1' %}" class="button btnPush btnBlueGreen">함께할 대학교 선택하기</a>
-        <a href="{% url 'showparticipate' %}" class="button btnPush btnBlueGreen">대학교 참여율 확인하기</a>
+        <a href="{% url 'showuniv_1' %}" title="Button push blue/green" class="button btnPush btnBlueGreen">
+            <img src="https://ifh.cc/g/ssBbsc.png" class="korea">
+            <h4 class="btnfont">함께할 대학교 선택하기</h4>
+        </a>
+
+        <a href="{% url 'showparticipate' %}" title="Button push blue/green" class="button btnPush btnBlueGreen">
+            <img src="https://ifh.cc/g/ssBbsc.png" class="korea">
+            <h4 class="btnfont">대학교 참여율 확인하기</h4>
+        </a>
+
 
 
     </div>
+
+
 
 </body>
 
