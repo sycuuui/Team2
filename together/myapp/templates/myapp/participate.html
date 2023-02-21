@@ -1,4 +1,117 @@
-<h2>학교별 순위 알림표</h2><br>
-<h3>순위 표시..(함수 만들어야 함)</h3><br>
-<h2>우리 학교 순위는?</h2><br>
-<a href="{% url 'showprob1' %}">문제 풀러 가기</a>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결과</title>
+
+    <!-- p 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <!-- p 폰트 -->
+
+    <!-- 130 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <!-- 130 폰트 -->
+
+    <!-- css 연결 -->
+    <link rel="stylesheet" href="./resultStyle.css">
+    <!-- css 연결 -->
+
+</head>
+
+<body>
+
+    <div class="outer">
+
+        <!-- 학교별 순위 알림표, 맨 위 -->
+            <br>
+            <div class="box1">
+                <h3 style="color: white;">학교별 순위 알림표</h3>
+            </div>
+            <br>
+
+
+
+        <!-- 1위~5위 -->
+            <div class="box2">
+
+                <br>
+
+                <div class="box4">
+                    <img src="korea.png" class="korea" >
+                    <h2>한성대</h2>
+                    <h2 style="margin-top:-10px;">2984</h2>
+                </div>
+
+                <div class="box4" style="margin-left:17px; margin-top: -20px;">
+                    <img src="korea.png" class="korea">
+                    <h2>동국대</h2>
+                    <h2 style="margin-top:-10px;">2584</h2>
+                </div>
+
+                <div class="box4" style="margin-right:17px; margin-top: -55px;">
+                    <img src="korea.png" class="korea" style="margin-top:8px;">
+                    <h2>상명대</h2>
+                    <h2 style="margin-top:-10px;">2284</h2>
+                </div>
+
+                <img src="dku.png" class="univ1">
+                <img src="hsu.png" class="univ2">
+                <img src="smu.png" class="univ3">
+                <img src="rank.png" class="rank">
+
+                <div class="box3">
+                    <img src="korea.png" class="korea_lowrank" >
+                    <h3 class="lowrank_univ">4위 동덕여자대학교</h3>
+                    <h3 class="lowrank_num">1217</h3>
+                </div>
+
+                <div class="box3">
+                    <img src="korea.png" class="korea_lowrank" >
+                    <h3 class="lowrank_univ">5위 성신여자대학교</h3>
+                    <h3 class="lowrank_num">991</h3>
+                </div>
+
+            </div>
+
+
+         <!-- 우리학교 순위 -->
+            <br>
+            <div class="box1">
+                <h3 style="color: white;">우리 학교 순위는?</h3>
+            </div>
+
+            <div class="my_school_box">
+
+                <img src="ssu.png" class="my_school_icon">
+
+                <div class="my_school_rank">
+                    <h3 style="color:black">12위</h3>
+                </div>
+
+                <div class="my_school_num">
+                    <img src="korea.png" class="my_school_korea" >
+                    <h2 style="margin-top:8px;">숭실대</h2>
+                    <h2 style="margin-top:-20px;">2984</h2>
+                </div>
+
+            </div>
+
+            <br>
+      
+
+        <!-- 문제풀러가기 버튼 -->
+        <a href="{% url 'showprob1' %}" title="Button push blue/green" class="button btnPush btnBlueGreen">문제 풀러 가기!</a>
+
+
+    </div>
+
+</body>
+
+</html>
