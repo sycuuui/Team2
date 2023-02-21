@@ -1,33 +1,64 @@
-<div class="qbox">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quizMain</title>
+    <link rel="stylesheet" href="quizMain.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
+      rel="stylesheet"
+    />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  </head>
+  <body>
+    <div class="landing-wrapper">
+      <div class="maindiv">
+        <h2 id="timer">10</h2>
+        <div class="quizbox-wrapper">
+          <div class="quizbox">
+            <div class="topbox-wrapper">
+              <div class="topbox">
+                <img src="korea-btn.png" class="korea-btn" />
+                <p id="qcount">독립운동 관련 문제 2번</p>
+              </div>
+            </div>
+            <h2 id="question">
+              Q. 민족대표_인은 독립 선언서를 낭독하고 민족의 자주독립을
+              선언했다.
+            </h2>
+            <img id="questionImg" />
+          </div>
+        </div>
+        <div class="answerbox-wrapper">
+          <button class="answerbtn" id="answerbtn1" value="1">
+            <img src="korea-btn.png" class="korea-btn" />
+            <p class="answercontent" id="answer1">1번 답</p>
+          </button>
+          <button class="answerbtn" id="answerbtn2" value="2">
+            <img src="korea-btn.png" class="korea-btn" />
+            <p class="answercontent" id="answer2">2번 답</p>
+          </button>
+          <button class="answerbtn" id="answerbtn3" value="3">
+            <img src="korea-btn.png" class="korea-btn" />
+            <p class="answercontent" id="answer3">3번 답</p>
+          </button>
 
-</div>
-<div class="answer">
-    
-</div>
+          <!--모달창 부분-->
+          <div id="modal-container" class="modal unstaged">
+            <div class="modal-overlay"></div>
+            <div class="modal-contents" id="modal-contents">
+              <p id="OXtext">정답입니다.</p>
+              <img src="Oimage.png" id="OXimage" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- <div class="prob1">
-    <h2>독립운동가 관련 문제 1번</h2><br>
-    <h3>Q. 다음 중 어느 나라에서 대한민국 임시 정부가 설립되었을까?</h3><br>
-    <h3>image</h3>
-    <button>1. 중국 상하이</button>
-    <button>2. 중국 칭따오</button>
-    <button>3. 미국 LA</button>
-</class>
-<div class="prob2">
-    <h2>독립운동가 관련 문제 1번</h2><br>
-    <h3>Q. 다음 중 어느 나라에서 대한민국 임시 정부가 설립되었을까?</h3><br>
-    <h3>image</h3>
-    <button>1. 중국 상하이</button>
-    <button>2. 중국 칭따오</button>
-    <button>3. 미국 LA</button>
-</class>
-<div class="prob3">
-    <h2>독립운동가 관련 문제 1번</h2><br>
-    <h3>Q. 다음 중 어느 나라에서 대한민국 임시 정부가 설립되었을까?</h3><br>
-    <h3>image</h3>
-    <button>1. 중국 상하이</button>
-    <button>2. 중국 칭따오</button>
-    <button>3. 미국 LA</button>
-</class> -->
-<script src="/static/js/prob.js" charset="utf-8"></script>
-<h3>정담/오답에 대한 모달 제작(마지막 문제는 태극기 휙득 페이지)</h3>
+    <script src="/static/js/prob.js"></script>
+  </body>
+</html>
