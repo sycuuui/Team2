@@ -78,3 +78,67 @@ button {
   color: #6a3d09;
   background: #fceed2;
 }
+
+
+
+/* 버튼 안에 있는 태극기 */
+.korea {
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+
+/* 버튼 안에 글자 */
+.btnfont {
+  margin-right: 10px;
+}
+
+
+/* 3.1운동 함께 참여하기 */
+
+a,
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a.button {
+    font-family: 'Noto Serif KR', serif;
+    display: block;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: 900;
+    font-size: small;
+    text-align: center;
+    line-height: 42px;
+    /* 글자색 */
+    color: #6D4D0B;
+    border-radius: 18px;
+    transition: all 0.2s;
+}
+
+.btnBlueGreen.btnPush {
+    /* 그림자 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btnPush:hover {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.btnBlueGreen.btnPush:hover {
+    /* 그림자 */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btnBlueGreen {
+    background: #FCEED2;
+}
+
+/* 3.1운동 함께 참여하기 */
+
