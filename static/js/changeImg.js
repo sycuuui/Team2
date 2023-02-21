@@ -1,8 +1,8 @@
 var imgArray = new Array();
-imgArray[0]="img/1.png";
-imgArray[1]="img/2.png";
-imgArray[2]="img/3.png";
-imgArray[3]="img/4.png";
+imgArray[0]="https://angelplayer.tistory.com/172";
+imgArray[1]="https://ifh.cc/g/dQPHnb.png";
+imgArray[2]="https://ifh.cc/g/on5993.png";
+imgArray[3]="https://ifh.cc/g/XqarZK.png";
 
 var count = 0;
 
