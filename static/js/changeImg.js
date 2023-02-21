@@ -1,5 +1,5 @@
 var imgArray = new Array();
-imgArray[0]="https://angelplayer.tistory.com/172";
+imgArray[0]="https://ifh.cc/g/0W4ANn.png";
 imgArray[1]="https://ifh.cc/g/dQPHnb.png";
 imgArray[2]="https://ifh.cc/g/on5993.png";
 imgArray[3]="https://ifh.cc/g/XqarZK.png";
@@ -14,7 +14,6 @@ function changeImage(){
             count=0;
         }
         setTimeout(changeImage,500);
-        
 }
         
         
