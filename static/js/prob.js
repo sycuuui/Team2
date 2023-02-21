@@ -76,7 +76,7 @@ function timer() {
       console.log("오답!");
       clearInterval(counter);
       document.getElementById("OXtext").innerHTML = "시간초과!";
-      document.getElementById("OXimage").src = "Ximage.png";
+      document.getElementById("OXimage").src = "staticimgXimage.png";
       document.getElementById("modal-container").classList.toggle("opaque");
       document.getElementById("modal-container").classList.toggle("unstaged");
     }
@@ -116,7 +116,8 @@ $(".answerbtn").click(function () {
     if (qcount < 10) {
       //단순 정답창
       document.getElementById("OXtext").innerHTML = "정답입니다.";
-      document.getElementById("OXimage").src = "Oimage.png";
+      document.getElementById("OXimage").src =
+        "../../../../static/img/Oimage.png";
       document.getElementById("modal-container").classList.toggle("opaque");
       document.getElementById("modal-container").classList.toggle("unstaged");
       qcount++;
@@ -128,7 +129,8 @@ $(".answerbtn").click(function () {
     console.log("오답!");
     clearInterval(counter);
     document.getElementById("OXtext").innerHTML = "오답입니다.";
-    document.getElementById("OXimage").src = "Ximage.png";
+    document.getElementById("OXimage").src =
+      "../../../../static/img/Ximage.png";
     document.getElementById("modal-container").classList.toggle("opaque");
     document.getElementById("modal-container").classList.toggle("unstaged");
   }
