@@ -3,10 +3,18 @@ body {
   background: white
 }
 
+@media(min-width:390px){
+  body{
+      background-color: #D9C08C;
+  }
+}
+
 .outer {
   width: 390px;
-  height: 800px;
-  background: #D9C08C
+  height: 844px;
+  background: #D9C08C;
+  border-top: 12px solid #5b3408;
+  border-bottom: 12px solid #795610;
 }
 
 
@@ -20,6 +28,7 @@ p {
   font-weight: 400;
   font-family: 'Noto Serif KR', serif;
 }
+
 
 
 /* 칠판안에 사진 */
