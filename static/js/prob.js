@@ -106,11 +106,12 @@ document.getElementById("answer3").innerHTML =
   quizinfo[qnum - 1].answerChoice[2];
 
 // if(qcount<10&&버튼을 누르게 된 요소가 정답과 같으면) 정답 modal + qcount++
-
+var answerScore =0;
 $(".answerbtn").click(function () {
   if ($(this).attr("value") == quizinfo[qnum - 1].answerIndex) {
     // 정답일 때 이벤트
-
+    answerScore++;//정답일때 변수+1
+    console.log(answerScore);    
     console.log("정답!");
     clearInterval(counter);
     if (qcount < 10) {
@@ -137,3 +138,8 @@ $(".answerbtn").click(function () {
 //if(qcount == 10 &&정답이면) 최종 modal창
 
 //버튼을 누르게 된 요소가 오답이면 오답 modal
+var click = 0;
+      function clickCount(){
+        click++;
+        console.log(click);
+      }
