@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-from pathlib import PurePath
+from pathlib import PurePath, Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -121,7 +121,7 @@ USE_TZ = False
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'myapp', 'static')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

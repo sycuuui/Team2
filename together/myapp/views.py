@@ -14,7 +14,7 @@ def showintro2(request):
 
 def showuniv(request):
     unives = Univ.objects.all()
-    return render(request, 'myapp/univ_1.html', {'unives' : unives})
+    return render(request, 'myapp/univ.html', {'unives' : unives})
 
 def showprob(request):
     # quizes = Question.objects.all()

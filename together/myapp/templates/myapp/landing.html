@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+
+{%load static%}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing</title>
-    <link
+    <!-- <link
       rel="stylesheet"
       type="text/css"
       href="../../../../static/css/landing.css"
-    />
+    /> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/landing.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +30,7 @@
         </div>
 
         <br>
-        <a href="{% url 'showprob' %}" class="button btnPush btnBlueGreen">
+        <a href="{% url 'showintro' %}" class="button btnPush btnBlueGreen">
           <img src="https://ifh.cc/g/ssBbsc.png" class="korea">
           <h4 class="btnfont">3.1운동 함께 참여하기</h4>
         </a>
