@@ -12,20 +12,18 @@
     <title>Document</title>
 </head>
 <body>
-    {%for univ in unives%}
     <div id="school-select">
         <div class="school-box">
+            {%for univ in unives%}
             <div class="school-univ">
                 <img class="school-logo-img" src="../../../../static/img/school-loco.png">
-    
                 <button class="school-univ-name-box">
                     <div class="school-univ-image">{{univ.image}}</div> 
                     <div class="school-univ-name">{{univ.univ}}</div> 
                 </button>
             </div>
-
+            {%endfor%}
         </div>
     </div>
-    {%endfor%}
 </body>
 </html>
