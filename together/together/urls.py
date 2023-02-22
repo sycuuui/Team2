@@ -22,9 +22,7 @@ urlpatterns = [
     path('', views.showlanding, name="showlanding"),
     path('intro/', views.showintro, name="showintro"),
     path('intro2/', views.showintro2, name="showintro2"),
-    path('univ_1/', views.showuniv_1, name="showuniv_1"),
-    path('univ_2/', views.showuniv_2, name="showuniv_2"),
-    path('univ_3/', views.showuniv_3, name="showuniv_3"),
+    path('univ/', views.showuniv, name="showuniv"),
     path('prob/', views.showprob, name="showprob"),
     path('participate/', views.showparticipate, name="showparticipate")
 ]

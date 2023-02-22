@@ -1,6 +1,12 @@
 from django.db import models
 
 # Create your models here.
+class Univ(models.Model):
+    id=models.AutoField(primary_key=True)
+
+    univ = models.CharField(max_length=50)
+    img = models.ImageField(max_length=500, null=True, blank=True)
+
 class Answer(models.Model):
     ans = models.CharField(default="", max_length=10, null=False, blank=False)
 
