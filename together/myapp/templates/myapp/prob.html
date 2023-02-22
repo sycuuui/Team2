@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>quizMain</title>
-    <link rel="stylesheet" href="../../../../static\css\prob.css" />
+    <link rel="stylesheet" href="/static/css/prob.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -23,12 +23,12 @@
             <div class="topbox-wrapper">
               <div class="topbox">
                 <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
-                <p id="qcount">독립운동 관련 문제 2번</p>
+                {%for quiz in quizes%}
+                <p id="qcount">독립운동 관련 문제 1번</p>
               </div>
             </div>
             <h2 id="question">
-              Q. 민족대표_인은 독립 선언서를 낭독하고 민족의 자주독립을
-              선언했다.
+              {{quiz.question}}
             </h2>
             <img id="questionImg" />
           </div>
@@ -36,18 +36,19 @@
         <div class="answerbox-wrapper">
           <button onclick="clickCount()" class="answerbtn" id="answerbtn1" value="1">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
-            <p class="answercontent" id="answer1">1번 답</p>
+            <p class="answercontent" id="answer1">{{quiz.option1}}</p>
           </button>
           <button onclick="clickCount()"  class="answerbtn" id="answerbtn2" value="2">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
-            <p class="answercontent" id="answer2">2번 답</p>
+            <p class="answercontent" id="answer2">{{quiz.option2}}</p>
           </button>
           <button onclick="clickCount()" class="answerbtn" id="answerbtn3" value="3">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
-            <p class="answercontent" id="answer3">3번 답</p>
+            <p class="answercontent" id="answer3">{{quiz.option3}}</p>
           </button>
+          {%endfor%}
 
-          <!--모달창 부분-->
+
           <div id="modal-container" class="modal unstaged">
             <div class="modal-overlay"></div>
             <div class="modal-contents" id="modal-contents">
@@ -59,5 +60,4 @@
       </div>
     </div>
     <script src="/static/js/prob.js"></script>
-  </body>
-</html>
+  </body>  
