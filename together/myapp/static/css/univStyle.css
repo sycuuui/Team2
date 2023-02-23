@@ -22,8 +22,11 @@
 .school-univ,#school-page-btn{
     display: flex;
     justify-content: center;
+    margin-top: 35px;
 }
-
+.logo-img{
+    margin-right: 35px;
+}
 .school-logo-img{
     width: 80px;
     height: 80px;
@@ -37,7 +40,6 @@
     height: 47px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
-    margin-top: 45px;
     cursor: pointer;
     border: none;
 }
@@ -45,8 +47,9 @@
 .school-univ-name-box img{
     float: left;
     margin-top: 2px;
-    margin-right: 10px;
+    margin-left: 10px;
 }
+
 
 .school-univ-name{
     font-family: 'Roboto';
@@ -54,7 +57,7 @@
     font-size: 18px;
     width: 150px;
     height: 16px;
-    margin-top: 10px;
+    margin-top: 6px;
     color: #6D4D0B;
 }
 
