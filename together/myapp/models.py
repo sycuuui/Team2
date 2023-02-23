@@ -6,6 +6,7 @@ class Univ(models.Model):
 
     univ = models.CharField(max_length=50)
     img = models.ImageField(max_length=500, null=True, blank=True)
+    total_score = models.IntegerField(default=0, null=True, blank=True)
 
 class Answer(models.Model):
     ans = models.CharField(default="", max_length=10, null=False, blank=False)
@@ -24,4 +25,4 @@ class Question(models.Model):
 class User(models.Model): 
     answer = models.CharField(default="", max_length=10, null=False, blank=False)
     score = models.IntegerField(default=0, null=True, blank=True)
-
+    univ = models.CharField(max_length=50)
