@@ -15,7 +15,7 @@
 <body>
     <div id="school-select">
         <div class="school-box">
-            {%for univ in unives%}
+            {%for univ in venues%}
             <div class="school-univ">
                 <img class="logo-img" src="{{univ.img.url}}" width="55", height="55">
                 <button class="school-univ-name-box">
@@ -25,12 +25,55 @@
             </div>
             {%endfor%}
         </div>
-        <div id="school-page-btn">
+        <!-- 페이징처리 시작 -->
+    <div id="paging">
+        <ul class="pagination justify-content-center" style="margin-top: 2rem;">
+            <!-- 이전페이지 -->
+            {% if venues.has_previous %}
+            <li class="page-item">
+                <a class="page-link" href="?&page={{ venues.previous_page_number }}"><img src="https://ifh.cc/g/3A8S2K.png"></a>
+                <!-- href로 뎁스 설정 -->
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="https://ifh.cc/g/3A8S2K.png"></a>
+            </li>
+            {% endif %}
+            <!-- 페이지리스트 -->
+            {% for page_number in venues.paginator.page_range %}
+            {% if page_number >= venues.number|add:-5 and page_number <= venues.number|add:5 %}
+            {% if page_number == venues.number %}
+            <li class="page-item active bg-warning" aria-current="page">
+                <a class="page-link" href="?&page={{ page_number }}">{{ page_number }}</a>
+            </li>
+            {% else %}
+            <li class="page-item bg-warning">
+                <a class="page-link" href="?&page={{ page_number }}">{{ page_number }}</a>
+            </li>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            <!-- 다음페이지 -->
+            {% if venues.has_next %}
+            <li class="page-item">
+                <a class="page-link" href="?&page={{ venues.next_page_number }}"><img src="https://ifh.cc/g/dQcylq.png"></a>
+            </li>
+            {% else %}
+            <li class="page-item disabled">
+                <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="https://ifh.cc/g/dQcylq.png"></a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+    <!-- 페이징처리 끝 -->
+        <!-- <div id="school-page-btn">
             <img src="https://ifh.cc/g/3A8S2K.png">
             <div id="school-page"> 1/3 </div>
             <img src="https://ifh.cc/g/dQcylq.png">
-        </div>
+        </div> -->
     </div>
+
+
     <!-- modal -->
     <div class="modal hidden">
         <div class="univ-modal-bg"></div>
