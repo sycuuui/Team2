@@ -14,7 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
       rel="stylesheet"
     />
-    <script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+    <script
+      src="http://code.jquery.com/jquery-latest.js"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <div class="landing-wrapper">
@@ -26,44 +29,99 @@
             <div class="topbox-wrapper">
               <div class="topbox">
                 <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
-                
-                <p id="qcount">독립운동 관련 문제 1번</p>
+
+                <p id="qcount">독립운동 관련 문제 번</p>
               </div>
             </div>
-            <h2 id="question">
-              {{quiz.question}}
-            </h2>
-            <img id="questionImg" src="{{quiz.q_img.url}}"/>
+            <h2 id="quizAnswer">{{quiz.question}}</h2>
+            <img id="questionImg" src="{{quiz.q_img.url}}" />
           </div>
         </div>
         <div class="answerbox-wrapper">
-          <button onclick="clickCount()" class="answerbtn" id="answerbtn1" value="1">
+          <button
+            onclick="clickCount()"
+            class="answerbtn"
+            id="answerbtn1"
+            value="1"
+          >
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer1">{{quiz.option1}}</p>
           </button>
-          <button onclick="clickCount()"  class="answerbtn" id="answerbtn2" value="2">
+          <button
+            onclick="clickCount()"
+            class="answerbtn"
+            id="answerbtn2"
+            value="2"
+          >
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer2">{{quiz.option2}}</p>
           </button>
-          <button onclick="clickCount()" class="answerbtn" id="answerbtn3" value="3">
+          <button
+            onclick="clickCount()"
+            class="answerbtn"
+            id="answerbtn3"
+            value="3"
+          >
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer3">{{quiz.option3}}</p>
           </button>
           {%endfor%}
 
-
+          <!--정답/오답 모달창-->
           <div id="modal-container" class="modal unstaged">
             <div class="modal-overlay"></div>
             <div class="modal-contents" id="modal-contents">
-              <p id="OXtext">정답입니다.</p>
+              <p id="OXtext">임시</p>
               <img src="https://ifh.cc/g/Fg1FWQ.png" id="OXimage" />
+              <div class="quizexplain">
+                <div class="quizExplainDetail">해설</div>
+                <p>
+                  해설해설해설해설해설해설해설해설해설해설해설해설해설해설해설해설해설해설해설해설
+                </p>
+              </div>
+              <button class="nextquiz-btn">다음 문제</button>
+            </div>
+          </div>
+          <!-- 시간초과 모달창 -->
+          <div class="modalTime hidden">
+            <div class="modal-overlay"></div>
+            <div class="Time-modal-bg"></div>
+            <div class="Time-modal-box">
+              <div class="TimeOver-Img-Wrap">
+                <div class="timeOverImg">
+                  <img src="https://ifh.cc/g/hkOWZo.png" id="OXimage" />
+                </div>
+                <div class="timeOverText">
+                  <p>TIME OVER</p>
+                </div>
+              </div>
+              <button>문제 풀기</button>
+            </div>
+          </div>
+          <!-- 퀴즈 결과 모달창-->
+          <div class="modalResult hiddenResult">
+            <div class="modal-overlay"></div>
+            <div class="Result-modal-bg"></div>
+            <div class="Result-modal-box">
+              <!-- flagcnt 띄워주기 -->
+              <div class="UFC-wrapper">
+                <div class="userFlagCnt">
+                  <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />+7
+                </div>
+              </div>
+
+              <!-- 학교의 총 깃발개수 + flagcnt한 값 띄워주기 -->
+              <p id="flagment">태극기를 획득했습니다!</p>
+              <div class="univflagcount-img"></div>
+              <button>대학교 별 순위 보러가기</button>
+              <button>문제 다시 풀기</button>
             </div>
           </div>
           <!-- 정답 개수 -->
-          
         </div>
       </div>
     </div>
-    <script src="{% static 'js/prob.js' %}" type="text/javascript"></script>
 
-  </body>  
+    <script src="{% static 'js/prob.js' %}" type="text/javascript"></script>
+  </body>
+</html>
