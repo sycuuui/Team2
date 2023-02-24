@@ -1,6 +1,6 @@
-@media(min-width:390px){
-  body{
-      background-color: #D9C08C;
+@media (min-width: 390px) {
+  body {
+    background-color: #d9c08c;
   }
 }
 body {
@@ -71,6 +71,11 @@ h1 {
   margin-top: 25px;
 }
 
+#questionImg {
+  width: 260px;
+  height: 350px;
+}
+
 .topbox {
   background-color: #fceed2;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.4);
@@ -98,7 +103,7 @@ h1 {
   justify-content: start;
 }
 
-.answerbox-wrapper button{
+.answerbox-wrapper button {
   cursor: pointer;
 }
 
@@ -153,8 +158,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 335px;
-  height: 367px;
+  width: 362px;
+  height: 709px;
 
   text-align: center;
   background-color: #fde7ba;
@@ -168,4 +173,166 @@ h1 {
 #OXtext {
   color: #6a3d09;
   font-size: 25px;
+}
+
+.nextquiz-btn {
+  display: block;
+  width: 156px;
+  height: 37px;
+  margin: 0 auto;
+  background: #fef5e3;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #6a3d09;
+  font-family: "Noto Serif KR", serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 27px;
+  margin-top: 20px;
+}
+
+/* 시간초과 모달 */
+
+.modalTime {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal .Time-modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Time-modal-box {
+  position: absolute;
+  background-color: #fde7ba;
+  width: 360px;
+  height: 420px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.Time-modal-box button {
+  display: block;
+  width: 208px;
+  height: 58px;
+  margin: 0 auto;
+  background: #fef5e3;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #6a3d09;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 27px;
+  margin-top: 20px;
+}
+
+.TimeOver-Img-Wrap {
+  width: 100%;
+  position: relative;
+}
+.timeOverText {
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  top: 10px;
+  left: 93px;
+  font-family: "Noto Serif KR", serif;
+}
+
+/* 결과 모달 */
+
+.modalResult {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modal .Result-modal-bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.Result-modal-box {
+  text-align: center;
+  position: absolute;
+  background-color: #e8dbca;
+  width: 335px;
+  height: 533px;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.hiddenResult {
+  display: none;
+}
+.Result-modal-box button {
+  display: block;
+  width: 268px;
+  height: 58px;
+  margin: 0 auto;
+  background: #fef5e3;
+  border-radius: 20px;
+  border-style: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  color: #6a3d09;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 27px;
+  margin-top: 20px;
+}
+
+.UFC-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userFlagCnt {
+  display: block;
+  border-radius: 1rem;
+  width: 115px;
+  height: 44px;
+  background-color: #fff7ec;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.univflagcount-img {
+  display: block;
+  border: 1px solid black;
+  width: 100%;
+  height: 180px;
+}
+
+#flagment {
+  font-size: 30px;
+  font-family: "Noto Serif KR", serif;
+  color: #6a3d09;
 }

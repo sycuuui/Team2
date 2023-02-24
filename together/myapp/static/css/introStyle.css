@@ -82,6 +82,7 @@
     background-color: #D9C08C;
 }
 #intro-next-btn img{
+    margin-top: 15px;
     width: 41px;
     height: 41px;
     cursor: pointer;
