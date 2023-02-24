@@ -54,9 +54,9 @@
             {% endif %}
             {% endfor %}
             <!-- 다음페이지 -->
-            {% if page_obj.has_next %}
+            {% if venues.has_next %}
             <li class="page-item">
-                <a class="page-link" href="?&page={{ page_obj.next_page_number }}"><img src="https://ifh.cc/g/dQcylq.png"></a>
+                <a class="page-link" href="?&page={{ venues.next_page_number }}"><img src="https://ifh.cc/g/dQcylq.png"></a>
             </li>
             {% else %}
             <li class="page-item disabled">
