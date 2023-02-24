@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_list_or_404,redirect
 from .models import Answer, Question, User, Univ
 import random, operator
+from django.core.paginator import Paginator
 
 # Create your views here.
 def showlanding(request):
@@ -14,7 +15,13 @@ def showintro2(request):
 
 def showuniv(request):
     unives = Univ.objects.all()
-    return render(request, 'myapp/univ.html', {'unives' : unives})
+
+    p = Paginator(Univ.objects.order_by('-id'),6)
+    page = request.GET.get('page')
+    venues = p.get_page(page)
+    page_obj = p.page(page) #페이지 번호를 받아 해당 페이지를 리턴 get_page 권장
+
+    return render(request, 'myapp/univ.html', {'unives' : unives, 'venues':venues, 'page_obj':page_obj} )
 
 def showprob(request):
     # quizes = Question.objects.all()
