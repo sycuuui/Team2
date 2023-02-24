@@ -19,9 +19,9 @@ def showuniv(request):
     p = Paginator(Univ.objects.order_by('-id'),6)
     page = request.GET.get('page')
     venues = p.get_page(page)
-    page_obj = p.page(page) #페이지 번호를 받아 해당 페이지를 리턴 get_page 권장
+    # page_obj = p.page(page) #페이지 번호를 받아 해당 페이지를 리턴 get_page 권장
 
-    return render(request, 'myapp/univ.html', {'unives' : unives, 'venues':venues, 'page_obj':page_obj} )
+    return render(request, 'myapp/univ.html', {'unives' : unives, 'venues':venues} )
 
 def showprob(request):
     # quizes = Question.objects.all()
