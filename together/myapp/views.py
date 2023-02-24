@@ -16,7 +16,7 @@ def showintro2(request):
 def showuniv(request):
     unives = Univ.objects.all()
 
-    p = Paginator(Univ.objects.order_by('-id'),5)
+    p = Paginator(Univ.objects.order_by('-id'),6)
     page = request.GET.get('page')
     venues = p.get_page(page)
     page_obj = p.page(page) #페이지 번호를 받아 해당 페이지를 리턴 get_page 권장
