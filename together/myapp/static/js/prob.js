@@ -6,10 +6,12 @@ var click = 1;
 document.getElementById("qcount").innerHTML =
   "독립운동 관련 문제 " + click + "번";
 
-function clickCount() {
-  click++;
-  console.log(click);
-}
+// function clickCount() {
+
+//   click++;
+//   console.log(click);
+// }
+
 function next() {
   var q = document.querySelector(".qbox");
   q.innerHTML = qnaList[0].q;
@@ -73,6 +75,8 @@ function timer() {
 // if(qcount<10&&버튼을 누르게 된 요소가 정답과 같으면) 정답 modal + qcount++
 var answerScore = 0;
 $(".answerbtn").click(function () {
+  click++;
+  console.log(click);
   if ($(this).attr("value") == quizAnswer) {
     // 정답일 때 이벤트
     answerScore++; //정답일때 변수+1
