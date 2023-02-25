@@ -21,10 +21,11 @@
     />
   </head>
 
-  <body onload="changeImage()">
+  <body onload="changeMainImage()">
     <div class="landing-wrapper">
       <div class="maindiv">
-        <img class="flowerPeople" src=" " />
+        <img id="flowerPeople" src=" " />
+        <img id="people" style="margin-top:-250px;"src="https://ifh.cc/g/6CGoW5.png">
         <div id="landing-title">
           <h1>봄에 피는 꽃</h1>
         </div>
@@ -42,46 +43,47 @@
         </button> -->
       </div>
     </div>
-    <script>
-      var imgArray = new Array();
-      imgArray[0]="https://ifh.cc/g/0NP4rd.png";
-      imgArray[1]="https://ifh.cc/g/yWZhM4.png";
-      imgArray[2]="https://ifh.cc/g/7PC08G.png";
-      imgArray[3]="https://ifh.cc/g/kdD82H.png";
-      imgArray[4]="https://ifh.cc/g/m56w96.png";
-      imgArray[5]="https://ifh.cc/g/JOYH8q.png";
-      imgArray[6]="https://ifh.cc/g/PpwcWs.png";
-      imgArray[7]="https://ifh.cc/g/2szvwG.png";
-      imgArray[8]="https://ifh.cc/g/Vv3dFX.png";
-      imgArray[9]="https://ifh.cc/g/mvNsSC.png";
-      imgArray[10]="https://ifh.cc/g/Wj2XTZ.png";
-      imgArray[11]="https://ifh.cc/g/5D9WwR.png";
-      imgArray[12]="https://ifh.cc/g/pHD7gB.png";
-      imgArray[13]="https://ifh.cc/g/ZFAC3n.png";
-      imgArray[14]="https://ifh.cc/g/W4CaMR.png";
-      imgArray[15]="https://ifh.cc/g/71moYJ.png";
-      imgArray[16]="https://ifh.cc/g/gjTacg.png";
-      imgArray[17]="https://ifh.cc/g/rHyXg0.png";
-      imgArray[18]="https://ifh.cc/g/9JC46N.png";
-      imgArray[19]="https://ifh.cc/g/d0zPNo.png";
-      imgArray[20]="https://ifh.cc/g/PGS7kb.png";
-      imgArray[21]="https://ifh.cc/g/9SOrZM.png";
-      imgArray[22]="https://ifh.cc/g/ddzZAg.png";
-      imgArray[23]="https://ifh.cc/g/VXJOab.png";
-      imgArray[24]="https://ifh.cc/g/Cj12OA.png";
-
-
-      var count = 0;
-
-      function changeImage(){
-              var objImg = document.getElementsByClass("flowerPeople");
-              objImg.src=imgArray[count];
-              count++;
-              if(count>24){
-                  count=0;
-              }
-              setTimeout(changeImage,500);
-      }
-    </script>
+    
   </body>
+  <script>
+    var imgArray = new Array();
+    imgArray[0]="https://ifh.cc/g/0NP4rd.png";
+    imgArray[1]="https://ifh.cc/g/yWZhM4.png";
+    imgArray[2]="https://ifh.cc/g/7PC08G.png";
+    imgArray[3]="https://ifh.cc/g/kdD82H.png";
+    imgArray[4]="https://ifh.cc/g/m56w96.png";
+    imgArray[5]="https://ifh.cc/g/JOYH8q.png";
+    imgArray[6]="https://ifh.cc/g/PpwcWs.png";
+    imgArray[7]="https://ifh.cc/g/2szvwG.png";
+    imgArray[8]="https://ifh.cc/g/Vv3dFX.png";
+    imgArray[9]="https://ifh.cc/g/mvNsSC.png";
+    imgArray[10]="https://ifh.cc/g/Wj2XTZ.png";
+    imgArray[11]="https://ifh.cc/g/5D9WwR.png";
+    imgArray[12]="https://ifh.cc/g/pHD7gB.png";
+    imgArray[13]="https://ifh.cc/g/ZFAC3n.png";
+    imgArray[14]="https://ifh.cc/g/W4CaMR.png";
+    imgArray[15]="https://ifh.cc/g/71moYJ.png";
+    imgArray[16]="https://ifh.cc/g/gjTacg.png";
+    imgArray[17]="https://ifh.cc/g/rHyXg0.png";
+    imgArray[18]="https://ifh.cc/g/9JC46N.png";
+    imgArray[19]="https://ifh.cc/g/d0zPNo.png";
+    imgArray[20]="https://ifh.cc/g/PGS7kb.png";
+    imgArray[21]="https://ifh.cc/g/9SOrZM.png";
+    imgArray[22]="https://ifh.cc/g/ddzZAg.png";
+    imgArray[23]="https://ifh.cc/g/VXJOab.png";
+    imgArray[24]="https://ifh.cc/g/Cj12OA.png";
+
+
+    var count = 0;
+
+    function changeMainImage(){
+            var objImg = document.getElementById("flowerPeople");
+            objImg.src=imgArray[count];
+            count++;
+            if(count>23){
+                count=0;
+            }
+            setTimeout(changeMainImage,100);
+    }
+  </script>
 </html>
