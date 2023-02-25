@@ -21,6 +21,10 @@ def showuniv(request):
     venues = p.get_page(page)
     # page_obj = p.page(page) #페이지 번호를 받아 해당 페이지를 리턴 get_page 권장
 
+    person = User()
+    person.univ = request.POST.get('univ_name')
+    person.save()
+
     return render(request, 'myapp/univ.html', {'unives' : unives, 'venues':venues} )
 
 def showprob(request):
@@ -36,11 +40,11 @@ def showparticipate(request):
     user = User.objects.all()
     unives = Univ.objects.all()
 
-    if request.POST:
-        for univ in unives:
-            if (user.univ == univ.univ) and (user.score != 0):
-                univ.total_score += user.score
-                univ.save()
+
+    for univ in unives:
+        if (user.univ == univ.univ) and (user.score != 0):
+            univ.total_score += user.score
+            univ.save()
 
     unives1 = list(Univ.objects.all().order_by('-total_score'))[:1]
     unives2 = list(Univ.objects.all().order_by('-total_score'))[1:2]
