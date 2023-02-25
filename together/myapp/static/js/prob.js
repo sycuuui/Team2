@@ -2,6 +2,9 @@
 //구글링 해도 받아와지지 않는다!
 
 //버튼을 누르게 된 요소가 오답이면 오답 modal
+//태극기 카운트 위해
+var answerScore = 0;
+var flagcnt= 0;
 var click = 1;
 document.getElementById("qcount").innerHTML =
   "독립운동 관련 문제 " + click + "번";
@@ -28,13 +31,12 @@ console.log(quizAnswer);
 //6. 정답일 시 다음 문제로 넘어가게 하기
 //7. 10번 문제도 정답일 시에 태극기 count +=1 하고 정답 modal창 생성
 var c;
+
 //태극기 카운트 위해
 var flagcnt = 0;
 //문제 숫자 세기
 var qcount = 1;
 
-//랜덤 문제 선택 임시 수정부탁이용
-var qnum = parseInt(Math.random() * 5 + 1);
 
 
 /*1. 모달창 띄우기
@@ -43,7 +45,7 @@ var qnum = parseInt(Math.random() * 5 + 1);
 일단 따로 만들어서 관리 -> 정답/오답 가리는 함수 만들고 추가해야할듯*/
 
 /*2. timer 10초 설정*/
-var count = 0;
+var count = 10;
 var counter = setInterval(timer, 1000);
 
 function timer() {
@@ -59,7 +61,7 @@ function timer() {
       //시간초과 modal 생성
       console.log("시간초과!");
       clearInterval(counter);
-      document.querySelector(".modalResult").classList.remove("hiddenResult");
+      document.querySelector(".modalTime").classList.remove("hidden");
     }
 
     return;
@@ -73,25 +75,28 @@ function timer() {
 //7. 10번 문제가 정답일 시 -> if (10번 문제 && 정답)완료 modal창 생성 -> modal 창을 총 3개(정답/오답/완료)
 
 // if(qcount<10&&버튼을 누르게 된 요소가 정답과 같으면) 정답 modal + qcount++
-var answerScore = 0;
+
 $(".answerbtn").click(function () {
   click++;
-  console.log(click);
+  console.log("click"+click);
   if ($(this).attr("value") == quizAnswer) {
     // 정답일 때 이벤트
-    answerScore++; //정답일때 변수+1
-    console.log(answerScore);
+ 
+    console.log("answerscore"+answerScore);
     console.log("정답!");
     clearInterval(counter);
-    if (qcount < 10) {
+    if (click < 11) {
       //단순 정답창
       document.getElementById("OXtext").innerHTML = "정답입니다.";
       document.getElementById("OXimage").src = "https://ifh.cc/g/Fg1FWQ.png";
       document.getElementById("modal-container").classList.toggle("opaque");
       document.getElementById("modal-container").classList.toggle("unstaged");
       flagcnt++;
-    } else if (click == 10) {
+      
+    } else if (click == 11) {
       //최종정답창
+      document.getElementsByClassName(".userflagnum").innerHTML="+"+flagcnt;
+      document.querySelector(".modalResult").classList.remove("hiddenResult");
 
     }
   } else if ($(this).attr("value") != quizAnswer) {
@@ -105,6 +110,19 @@ $(".answerbtn").click(function () {
     document.getElementById("modal-container").classList.toggle("unstaged");
   }
 });
+
+$(".page-link").click(function() {
+  document.getElementById("modal-container").classList.toggle("opaque");
+  document.getElementById("modal-container").classList.toggle("unstaged");
+  click = click;
+  console.log("flag:"+flagcnt);
+  document.getElementById("qcount").innerHTML =
+   "독립운동 관련 문제 " + click + "번";
+ if(click==11){
+     document.querySelector(".modalResult").classList.remove("hiddenResult");
+    
+ }
+ });
 
 //if(qcount == 10 &&정답이면) 최종 modal창
 

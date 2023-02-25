@@ -9,6 +9,7 @@
     <!-- <link rel="stylesheet" href="/static/css/prob.css" /> -->
     <link rel="stylesheet" type="text/css" href="{% static 'css/prob.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap"
@@ -39,17 +40,18 @@
           </div>
         </div>
         <div class="answerbox-wrapper">
-
+    
         <a id="quizAnswer">{{quiz.ans}}</a>
-          <button onclick="clickCount()" class="answerbtn" id="answerbtn1" value="1">
+  
+          <button  class="answerbtn" id="answerbtn1" value="1">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer1">{{quiz.option1}}</p>
           </button>
-          <button onclick="clickCount()"  class="answerbtn" id="answerbtn2" value="2">
+          <button   class="answerbtn" id="answerbtn2" value="2">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer2">{{quiz.option2}}</p>
           </button>
-          <button onclick="clickCount()" class="answerbtn" id="answerbtn3" value="3">
+          <button class="answerbtn" id="answerbtn3" value="3">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer3">{{quiz.option3}}</p>
           </button>
@@ -112,11 +114,11 @@
                 <!-- 다음페이지 -->
                 {% if venues.has_next %}
                 <div class="page-item">
-                    <a class="page-link" href="?&page={{ venues.next_page_number }}">다음 문제 풀기</a>
+                    <a class="page-link" style="color:black;"href="?&page={{ venues.next_page_number }}">다음 문제 풀기</a>
                 </div>
                 {% else %}
                 <div class="page-item disabled">
-                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음 문제 풀기</a>
+                    <a class="page-link" tyle="color:black;"tabindex="-1" aria-disabled="true" href="#">다음 문제 풀기</a>
                 </div>
                 {% endif %}
               </button>
@@ -162,12 +164,18 @@
                   <h4 style="width: 100px; margin-top: -88px; margin-left: 30px;">숭실대</h4>
                   <h4 style="margin-top: -10px; margin-left: 10px;">584</h4>
                 </div>
-                
-              </div>
-              <button>대학교 별 순위 보러가기</button>
-              <button>문제 다시 풀기</button>
+             </div>
+                <div>
+
+                  <a href="{% url 'showparticipate' %}" class="button btnPush btnBlueGreen">대학교 별 순위 보러가기</a>
+                  <a href="{% url 'showintro' %}" class="button btnPush btnBlueGreen" >문제 풀러 가기!</a>
+                </div>
+
+               
+
+       
             </div>
-          </div>
+      
 
           {%endfor%}
           <!-- 정답 개수 -->
