@@ -1,7 +1,22 @@
+//정답 비교는 js 에서 템플릿 변수를 받아와서 그 값과 value 값을 비교하면 되는데 받아오는 방법을 모르겠다!
+//구글링 해도 받아와지지 않는다!
+
+//버튼을 누르게 된 요소가 오답이면 오답 modal
+var click = 1;
+document.getElementById("qcount").innerHTML =
+  "독립운동 관련 문제 " + click + "번";
+
+function clickCount() {
+  click++;
+  console.log(click);
+}
 function next() {
   var q = document.querySelector(".qbox");
   q.innerHTML = qnaList[0].q;
 }
+//quizanswer 가져오기
+var quizAnswer = document.getElementById("quizAnswer").innerHTML;
+console.log(quizAnswer);
 
 //1.modal창 만들기 -> 성공했을때 실패했을때 함수 두개 다 만들기
 //2. timer 10초설정
@@ -72,13 +87,10 @@ function timer() {
     document.getElementById("timer").innerHTML = "Time Over";
     //문제 선택을 안했다면 오답창이 뜨게 하는 이벤트 추가.
     if (document.getElementById("timer").innerHTML == "Time Over") {
-      //오답 modal 생성
-      console.log("오답!");
+      //시간초과 modal 생성
+      console.log("시간초과!");
       clearInterval(counter);
-      document.getElementById("OXtext").innerHTML = "시간초과!";
-      document.getElementById("OXimage").src = "staticimgXimage.png";
-      document.getElementById("modal-container").classList.toggle("opaque");
-      document.getElementById("modal-container").classList.toggle("unstaged");
+      document.querySelector(".modalResult").classList.remove("hiddenResult");
     }
 
     return;
@@ -91,27 +103,13 @@ function timer() {
 //5.6. 문제가 정답인지 오답인지 확인하게 하기 각 경우마다 해당 modal창 생성
 //7. 10번 문제가 정답일 시 -> if (10번 문제 && 정답)완료 modal창 생성 -> modal 창을 총 3개(정답/오답/완료)
 
-//문제 만들기 빡세다! 살려줘!
-document.getElementById("qcount").innerHTML = `독립운동 관련 문제 ${qcount} 번`;
-
-document.getElementById("question").innerHTML = quizinfo[qnum - 1].question;
-
-//document.getElementById("questionImg").src = "";
-
-document.getElementById("answer1").innerHTML =
-  quizinfo[qnum - 1].answerChoice[0];
-document.getElementById("answer2").innerHTML =
-  quizinfo[qnum - 1].answerChoice[1];
-document.getElementById("answer3").innerHTML =
-  quizinfo[qnum - 1].answerChoice[2];
-
 // if(qcount<10&&버튼을 누르게 된 요소가 정답과 같으면) 정답 modal + qcount++
-var answerScore =0;
+var answerScore = 0;
 $(".answerbtn").click(function () {
-  if ($(this).attr("value") == quizinfo[qnum - 1].answerIndex) {
+  if ($(this).attr("value") == quizAnswer) {
     // 정답일 때 이벤트
-    answerScore++;//정답일때 변수+1
-    console.log(answerScore);    
+    answerScore++; //정답일때 변수+1
+    console.log(answerScore);
     console.log("정답!");
     clearInterval(counter);
     if (qcount < 10) {
@@ -120,14 +118,15 @@ $(".answerbtn").click(function () {
       document.getElementById("OXimage").src = "https://ifh.cc/g/Fg1FWQ.png";
       document.getElementById("modal-container").classList.toggle("opaque");
       document.getElementById("modal-container").classList.toggle("unstaged");
-      qcount++;
-    } else if (qcount == 10) {
+      flagcnt++;
+    } else if (click == 10) {
       //최종정답창
     }
-  } else if ($(this).attr("value") != quizinfo[qnum - 1].answerIndex) {
+  } else if ($(this).attr("value") != quizAnswer) {
     // 오답일 때 이벤트
     console.log("오답!");
     clearInterval(counter);
+    document.getElementById("modal-contents").style.backgroundColor = "#D9C08C";
     document.getElementById("OXtext").innerHTML = "오답입니다.";
     document.getElementById("OXimage").src = "https://ifh.cc/g/BmLabp.png";
     document.getElementById("modal-container").classList.toggle("opaque");
@@ -136,10 +135,3 @@ $(".answerbtn").click(function () {
 });
 
 //if(qcount == 10 &&정답이면) 최종 modal창
-
-//버튼을 누르게 된 요소가 오답이면 오답 modal
-var click = 0;
-      function clickCount(){
-        click++;
-        console.log(click);
-      }
