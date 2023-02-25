@@ -43,7 +43,7 @@ var qnum = parseInt(Math.random() * 5 + 1);
 일단 따로 만들어서 관리 -> 정답/오답 가리는 함수 만들고 추가해야할듯*/
 
 /*2. timer 10초 설정*/
-var count = 10;
+var count = 0;
 var counter = setInterval(timer, 1000);
 
 function timer() {
