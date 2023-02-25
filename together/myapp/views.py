@@ -40,14 +40,14 @@ def showprob(request):
     return render(request, 'myapp/prob.html', {'quizes' :quizes, 'venues' : venues})
 
 def showparticipate(request):
-    user = User.objects.all()
+    person = User()
     unives = Univ.objects.all()
 
 
     for univ in unives:
-        if user.univ == univ.univ:
-            univ.total_score += user.score
-            univ.save()
+        if person.univ == univ.univ:
+            univ.total_score += person.score
+            person.save()
 
     unives1 = list(Univ.objects.all().order_by('-total_score'))[:1]
     unives2 = list(Univ.objects.all().order_by('-total_score'))[1:2]
