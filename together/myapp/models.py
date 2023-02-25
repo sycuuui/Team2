@@ -19,6 +19,8 @@ class Question(models.Model):
     option2 = models.CharField(max_length=200)
     option3 = models.CharField(max_length=200)
     
+    ans = models.IntegerField(default=False)
+    explanation = models.TextField(default="", max_length=2000)
     q_img = models. ImageField (upload_to="img/%Y/%m/%d", null=True, blank=True)
 
     
