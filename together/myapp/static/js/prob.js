@@ -6,10 +6,12 @@ var click = 1;
 document.getElementById("qcount").innerHTML =
   "독립운동 관련 문제 " + click + "번";
 
-function clickCount() {
-  click++;
-  console.log(click);
-}
+// function clickCount() {
+
+//   click++;
+//   console.log(click);
+// }
+
 function next() {
   var q = document.querySelector(".qbox");
   q.innerHTML = qnaList[0].q;
@@ -34,39 +36,6 @@ var qcount = 1;
 //랜덤 문제 선택 임시 수정부탁이용
 var qnum = parseInt(Math.random() * 5 + 1);
 
-//임시 퀴즈 목록
-// const quizinfo = [
-//   {
-//     question: "문제 설명1",
-//     questionImg: ["", "", ""], //넣어야 하는 이미지들
-//     answerChoice: ["1-1", "1-2", "1-3"],
-//     answerIndex: 2, //일단 답이 1-2라고 설정해보자 answerChoice[i-1]
-//   },
-//   {
-//     question: "문제 설명2",
-//     questionImg: ["", "", ""],
-//     answerChoice: ["2-1", "2-2", "2-3"],
-//     answerIndex: 1,
-//   },
-//   {
-//     question: "문제 설명3",
-//     questionImg: ["", "", ""],
-//     answerChoice: ["3-1", "3-2", "3-3"],
-//     answerIndex: 2,
-//   },
-//   {
-//     question: "문제 설명4",
-//     questionImg: ["", "", ""],
-//     answerChoice: ["4-1", "4-2", "4-3"],
-//     answerIndex: 3,
-//   },
-//   {
-//     question: "문제 설명5",
-//     questionImg: ["", "", ""],
-//     answerChoice: ["5-1", "5-2", "5-3"],
-//     answerIndex: 1,
-//   },
-// ];
 
 /*1. 모달창 띄우기
 -> 구글링 하면 버튼 누르면 모달창이 실행되게 하는데 버튼 누르는 동작을
@@ -106,6 +75,8 @@ function timer() {
 // if(qcount<10&&버튼을 누르게 된 요소가 정답과 같으면) 정답 modal + qcount++
 var answerScore = 0;
 $(".answerbtn").click(function () {
+  click++;
+  console.log(click);
   if ($(this).attr("value") == quizAnswer) {
     // 정답일 때 이벤트
     answerScore++; //정답일때 변수+1
@@ -121,6 +92,7 @@ $(".answerbtn").click(function () {
       flagcnt++;
     } else if (click == 10) {
       //최종정답창
+
     }
   } else if ($(this).attr("value") != quizAnswer) {
     // 오답일 때 이벤트
@@ -135,3 +107,6 @@ $(".answerbtn").click(function () {
 });
 
 //if(qcount == 10 &&정답이면) 최종 modal창
+
+// var univflagcnt = univflagcnt + flagcnt;
+//document.getElementById("userflagunm").innerHTML="+"+flagcnt;
