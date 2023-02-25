@@ -18,6 +18,9 @@
   align-items: center;
   font-family: "Noto Serif KR", serif;
 }
+a.page-link {
+  color: #D9C08C;
+}
 
 .maindiv {
   border-top: 12px solid #5b3408;
