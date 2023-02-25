@@ -88,6 +88,7 @@ $(".answerbtn").click(function () {
       flagcnt++;
     } else if (click == 10) {
       //최종정답창
+
     }
   } else if ($(this).attr("value") != quizAnswer) {
     // 오답일 때 이벤트
@@ -102,3 +103,6 @@ $(".answerbtn").click(function () {
 });
 
 //if(qcount == 10 &&정답이면) 최종 modal창
+
+// var univflagcnt = univflagcnt + flagcnt;
+//document.getElementById("userflagunm").innerHTML="+"+flagcnt;
