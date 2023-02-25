@@ -6,6 +6,7 @@
 *{
   margin: 0;
 }
+/* 봄에 피는 꽃 */
 #landing-title{
   margin-top: 40px;
   margin-bottom: 20px;
@@ -26,19 +27,23 @@
   background-color: #d9c08c;
   text-align: center;
 }
-
+/* 꽃 */
 #flowerPeople {
   margin-top: -8px;
   width: 390px;
+  position: relative;
 }
+/* 사람 */
+#people{
 
+}
 h1 {
   font-size: 45px;
   line-height: 30px;
   color: #6a3d09;
   letter-spacing: 1px;
 }
-
+/* 버튼 */
 button {
   margin: 20px;
 }
@@ -149,4 +154,5 @@ a.button {
 }
 
 /* 3.1운동 함께 참여하기 */
+
 
