@@ -27,7 +27,7 @@ def showprob(request):
     # quizes = Question.objects.all()
     quizes = list(Question.objects.all())
     quizes = random.sample(quizes, 10)
-    p = Paginator(Question.objects.order_by('-id'),1)
+    p = Paginator(quizes,1)
     page = request.GET.get('page')
     venues = p.get_page(page)
     return render(request, 'myapp/prob.html', {'quizes' :quizes, 'venues' : venues})
