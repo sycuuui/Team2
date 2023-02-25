@@ -325,12 +325,24 @@ h1 {
 }
 
 .univflagcount-img {
-  display: block;
-  border: 1px solid black;
+
+  
   width: 100%;
   height: 180px;
-}
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.quizunivimg{
+  width: 100px;
+  height:178px;
+}
+.quizunivcnt{
+width:157px;
+height:105px;
+}
 #flagment {
   font-size: 30px;
   font-family: "Noto Serif KR", serif;

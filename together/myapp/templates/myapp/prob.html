@@ -40,7 +40,7 @@
         </div>
         <div class="answerbox-wrapper">
           <a id="quizAnswer">{{quiz.ans}}</a>
-          <button onclick="clickCount()" class="answerbtn" id="answerbtn1" value="1">
+          <button onclick="clickCount(); return false;" class="answerbtn" id="answerbtn1" value="1">
             <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />
             <p class="answercontent" id="answer1">{{quiz.option1}}</p>
           </button>
@@ -105,13 +105,18 @@
               <!-- flagcnt 띄워주기 -->
               <div class="UFC-wrapper">
                 <div class="userFlagCnt">
+                  <!-- 태극기 카운트 변수 표시 -->
                   <img src="https://ifh.cc/g/soFXmf.png" class="korea-btn" />+7
                 </div>
               </div>
 
               <!-- 학교의 총 깃발개수 + flagcnt한 값 띄워주기 -->
               <p id="flagment">태극기를 획득했습니다!</p>
-              <div class="univflagcount-img"></div>
+              <div class="univflagcount-img">
+                <!-- 학교별 이미지 로드 -->
+                <img class="quizunivimg"  src="https://ifh.cc/g/hkOWZo.png"/>
+                <img class="quizunivcnt" src="https://ifh.cc/g/6SxyfS.png"/>
+              </div>
               <button>대학교 별 순위 보러가기</button>
               <button>문제 다시 풀기</button>
             </div>
