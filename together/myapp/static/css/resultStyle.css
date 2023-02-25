@@ -94,9 +94,7 @@ body {
 /* 4~5위 태극기 갯수 */
 .lowrank_num {
     float: right;
-    margin-top: 6px;
     margin-right: 18px;
-    margin-top:-24px;
 }
 
 /* 4~5위 학교 */
@@ -144,7 +142,6 @@ body {
     border-radius: 10px;
     font-size: small;
     color:#6A3D09;
-    margin-top: 10px;
 }
 
 .box4 {

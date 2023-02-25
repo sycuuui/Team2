@@ -84,13 +84,13 @@
 
             <!-- 이전페이지 -->
             {% if venues.has_previous %}
-            <div class="page-item" style="float: left; width: 33%; " >
+            <div class="page-item" style="float: left; width: 33%;" >
                 <a class="page-link" href="?&page={{ venues.previous_page_number }}"><img src="https://ifh.cc/g/3A8S2K.png"></a>
                 <!-- href로 뎁스 설정 -->
             </div>
 
             {% else %}
-            <div class="page-item disabled" style="float: left; width: 33%;">
+            <div class="page-item disabled" style="float: left; width: 33% ">
                 <a class="page-link" tabindex="-1" aria-disabled="true" href="#"><img src="https://ifh.cc/g/3A8S2K.png"></a>
             </div>
             {% endif %}
@@ -99,7 +99,7 @@
             {% for page_number in venues.paginator.page_range %}
             {% if page_number >= venues.number|add:-5 and page_number <= venues.number|add:5 %}
             {% if page_number == venues.number %}
-            <div class="page-item active bg-warning" style="text-decoration-line: none; float: left; width: 33%;"aria-current="page">
+            <div class="page-item active bg-warning" style="text-decoration-line: none; float: left; width: 33% "aria-current="page">
                 <a class="page-link" href="?&page={{ page_number }}">{{ page_number }}</a>
             </div>
 

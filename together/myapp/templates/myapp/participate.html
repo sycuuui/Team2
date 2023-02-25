@@ -69,7 +69,25 @@
                 <img src="https://ifh.cc/g/zgWg4x.png" class="univ3">
                 <img src="https://ifh.cc/g/KzoLW8.png" class="rank">
 
+
                 {% for univ in unives4 %}
+                <div class="box3">
+                    <h3 class="lowrank_univ">4위 {{univ.univ}}</h3>
+                    <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
+                    <h3 class="lowrank_num" style="margin-top: 6px;">{{univ.total_score}}</h3>
+                </div>
+                {% endfor %}
+
+                {% for univ in unives5 %}
+                <div class="box3">
+                    <h3 class="lowrank_univ">5위 {{univ.univ}}</h3>
+                    <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
+                    <h3 class="lowrank_num" style="margin-top: 6px;">{{univ.total_score}}</h3>
+                </div>
+                {% endfor %}
+
+
+                <!-- {% for univ in unives4 %}
                 <div class="box3">
                     <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
                     <h3 class="lowrank_univ">4위 {{univ.univ}}</h3>
@@ -82,7 +100,10 @@
                     <h3 class="lowrank_univ">5위 {{univ.univ}}</h3>
                     <h3 class="lowrank_num">{{univ.total_score}}</h3>
                 </div>
-                {% endfor %}
+                {% endfor %} -->
+
+                
+
             </div>
 
 

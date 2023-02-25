@@ -32,6 +32,7 @@
 
         <!-- 학교별 순위 알림표, 맨 위 -->
             <br>
+            <br>
             <div class="box1">
                 <h3 style="color: white;">학교별 순위 알림표</h3>
             </div>
@@ -71,18 +72,20 @@
 
                 {% for univ in unives4 %}
                 <div class="box3">
-                    <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
                     <h3 class="lowrank_univ">4위 {{univ.univ}}</h3>
-                    <h3 class="lowrank_num">{{univ.total_score}}</h3>
+                    <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
+                    <h3 class="lowrank_num" style="margin-top: 6px;">{{univ.total_score}}</h3>
                 </div>
                 {% endfor %}
+
                 {% for univ in unives5 %}
                 <div class="box3">
-                    <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
                     <h3 class="lowrank_univ">5위 {{univ.univ}}</h3>
-                    <h3 class="lowrank_num">{{univ.total_score}}</h3>
+                    <img src="https://ifh.cc/g/SmqXJo.png" class="korea_lowrank" >
+                    <h3 class="lowrank_num" style="margin-top: 6px;">{{univ.total_score}}</h3>
                 </div>
                 {% endfor %}
+
             </div>
 
 
