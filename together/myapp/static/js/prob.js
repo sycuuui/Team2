@@ -25,7 +25,7 @@ console.log(quizAnswer);
 //5. 오답일 시 오답 modal창과 main 화면과 이어지는 버튼 생성
 //6. 정답일 시 다음 문제로 넘어가게 하기
 //7. 10번 문제도 정답일 시에 태극기 count +=1 하고 정답 modal창 생성
-
+var c;
 //태극기 카운트 위해
 var flagcnt = 0;
 //문제 숫자 세기
