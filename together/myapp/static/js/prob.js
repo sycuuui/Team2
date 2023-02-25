@@ -20,38 +20,38 @@ var qcount = 1;
 var qnum = parseInt(Math.random() * 5 + 1);
 
 //임시 퀴즈 목록
-const quizinfo = [
-  {
-    question: "문제 설명1",
-    questionImg: ["", "", ""], //넣어야 하는 이미지들
-    answerChoice: ["1-1", "1-2", "1-3"],
-    answerIndex: 2, //일단 답이 1-2라고 설정해보자 answerChoice[i-1]
-  },
-  {
-    question: "문제 설명2",
-    questionImg: ["", "", ""],
-    answerChoice: ["2-1", "2-2", "2-3"],
-    answerIndex: 1,
-  },
-  {
-    question: "문제 설명3",
-    questionImg: ["", "", ""],
-    answerChoice: ["3-1", "3-2", "3-3"],
-    answerIndex: 2,
-  },
-  {
-    question: "문제 설명4",
-    questionImg: ["", "", ""],
-    answerChoice: ["4-1", "4-2", "4-3"],
-    answerIndex: 3,
-  },
-  {
-    question: "문제 설명5",
-    questionImg: ["", "", ""],
-    answerChoice: ["5-1", "5-2", "5-3"],
-    answerIndex: 1,
-  },
-];
+// const quizinfo = [
+//   {
+//     question: "문제 설명1",
+//     questionImg: ["", "", ""], //넣어야 하는 이미지들
+//     answerChoice: ["1-1", "1-2", "1-3"],
+//     answerIndex: 2, //일단 답이 1-2라고 설정해보자 answerChoice[i-1]
+//   },
+//   {
+//     question: "문제 설명2",
+//     questionImg: ["", "", ""],
+//     answerChoice: ["2-1", "2-2", "2-3"],
+//     answerIndex: 1,
+//   },
+//   {
+//     question: "문제 설명3",
+//     questionImg: ["", "", ""],
+//     answerChoice: ["3-1", "3-2", "3-3"],
+//     answerIndex: 2,
+//   },
+//   {
+//     question: "문제 설명4",
+//     questionImg: ["", "", ""],
+//     answerChoice: ["4-1", "4-2", "4-3"],
+//     answerIndex: 3,
+//   },
+//   {
+//     question: "문제 설명5",
+//     questionImg: ["", "", ""],
+//     answerChoice: ["5-1", "5-2", "5-3"],
+//     answerIndex: 1,
+//   },
+// ];
 
 /*1. 모달창 띄우기
 -> 구글링 하면 버튼 누르면 모달창이 실행되게 하는데 버튼 누르는 동작을
