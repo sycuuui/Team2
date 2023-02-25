@@ -13,6 +13,9 @@ def showintro(request):
 def showintro2(request):
     return render(request, 'myapp/intro2.html')
 
+def showgamestart(request):
+    return render(request, 'gamestart.html')
+
 def showuniv(request):
     unives = Univ.objects.all()
 

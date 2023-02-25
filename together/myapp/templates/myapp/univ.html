@@ -68,7 +68,7 @@
             {%for univ in venues%}
             <div class="school-univ">
                 <img class="logo-img" src="{{univ.img.url}}" width="55", height="55">
-                <form method="POST">
+                <form method="POST" action="/gamestart/">
                     {% csrf_token %}
                     <button type="submit" class="school-univ-name-box" value="{{univ.univ}}" name="univ_name">
                         <img class="school-univ-image" src="https://ifh.cc/g/SmqXJo.png"> 
