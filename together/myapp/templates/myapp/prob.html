@@ -110,7 +110,18 @@
               </div>
 
 
-              <button class="nextquiz-btn">다음 문제</button>
+              <button class="nextquiz-btn">
+                <!-- 다음페이지 -->
+                {% if venues.has_next %}
+                <div class="page-item">
+                    <a class="page-link" href="?&page={{ venues.next_page_number }}">다음 문제 풀기</a>
+                </div>
+                {% else %}
+                <div class="page-item disabled">
+                    <a class="page-link" tabindex="-1" aria-disabled="true" href="#">다음 문제 풀기</a>
+                </div>
+                {% endif %}
+              </button>
             </div>
           </div>
           <!-- 시간초과 모달창 -->
