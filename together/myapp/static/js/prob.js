@@ -15,7 +15,7 @@ function next() {
   q.innerHTML = qnaList[0].q;
 }
 //quizanswer 가져오기
-var quizAnswer = document.getElementById("quizanswer").innerHTML;
+var quizAnswer = document.getElementById("quizAnswer").innerHTML;
 console.log(quizAnswer);
 
 //1.modal창 만들기 -> 성공했을때 실패했을때 함수 두개 다 만들기
