@@ -49,6 +49,23 @@ def showparticipate(request):
     unives5 = list(Univ.objects.all().order_by('-total_score'))[5:6]
     return render(request, 'myapp/participate.html', {'unives1' : unives1, 'unives2' : unives2, 'unives3' : unives3, 'unives4' : unives4, 'unives5' : unives5})
 
+def showparticipate2(request):
+    user = User.objects.all()
+    unives = Univ.objects.all()
+
+    if request.POST:
+        for univ in unives:
+            if (user.univ == univ.univ) and (user.score != 0):
+                univ.total_score += user.score
+                univ.save()
+
+    unives1 = list(Univ.objects.all().order_by('-total_score'))[:1]
+    unives2 = list(Univ.objects.all().order_by('-total_score'))[1:2]
+    unives3 = list(Univ.objects.all().order_by('-total_score'))[2:3]
+    unives4 = list(Univ.objects.all().order_by('-total_score'))[3:4]
+    unives5 = list(Univ.objects.all().order_by('-total_score'))[5:6]
+    return render(request, 'myapp/participate2.html', {'unives1' : unives1, 'unives2' : unives2, 'unives3' : unives3, 'unives4' : unives4, 'unives5' : unives5})
+
 # def quiz(request, pk):
 #     user = get_list_or_404(User, pk=pk)
 #     aans = get_list_or_404(Answer)

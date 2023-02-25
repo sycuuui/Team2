@@ -26,7 +26,8 @@ urlpatterns = [
     path('intro2/', views.showintro2, name="showintro2"),
     path('univ/', views.showuniv, name="showuniv"),
     path('prob/', views.showprob, name="showprob"),
-    path('participate/', views.showparticipate, name="showparticipate")
+    path('participate/', views.showparticipate, name="showparticipate"),
+    path('participate2/', views.showparticipate2, name="showparticipate2")
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
