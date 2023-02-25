@@ -45,7 +45,7 @@ def showparticipate(request):
 
 
     for univ in unives:
-        if (user.univ == univ.univ) and (user.score != 0):
+        if user.univ == univ.univ:
             univ.total_score += user.score
             univ.save()
 
@@ -59,12 +59,6 @@ def showparticipate(request):
 def showparticipate2(request):
     user = User.objects.all()
     unives = Univ.objects.all()
-
-    if request.POST:
-        for univ in unives:
-            if (user.univ == univ.univ) and (user.score != 0):
-                univ.total_score += user.score
-                univ.save()
 
     unives1 = list(Univ.objects.all().order_by('-total_score'))[:1]
     unives2 = list(Univ.objects.all().order_by('-total_score'))[1:2]
