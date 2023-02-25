@@ -8,11 +8,6 @@
         background-color: #D9C08C;
     }
 }
-@media(min-height:844px){
-    #intro{
-        
-    }
-}
 #intro{
     background-color: #D9C08C;
     width: 390px;

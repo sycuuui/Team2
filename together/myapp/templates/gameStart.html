@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+        @media(min-width:390px){
+            body{
+                background-color: #D9C08C;
+            }
+        }
+        #game{
+            background-color: #D9C08C;
+            width: 390px;
+            height: 820px;
+            margin: 0 auto;
+            border-top: 12px solid #5b3408;
+            border-bottom: 12px solid #795610;
+
+        }
+
+    .univ-modal-box {
+        background-color: #FDE7BA;
+        margin-top: 140px;
+        width: 360px;
+        height: 520px;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .univ-modal-box button {
+        display: block;
+        width: 208px;
+        height: 58px;
+        margin: 0 auto;
+        background: #FEF5E3;
+        border-radius: 20px;
+        border-style: none;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        cursor: pointer;
+        color: #6A3D09;
+        font-family: 'Noto Serif KR', serif;
+        font-weight: 550;
+        font-size: 22px;
+        line-height: 27px;
+        margin-top: 30px;
+    }
+
+    .modal-quiz-img{
+        width: 405px;
+        margin-top: -24px;
+        margin-left: -22px;
+    }
+    </style>
+</head>
+<body>
+    <div id="game">
+        <div class="univ-modal-box">
+            <img class="modal-quiz-img" src="https://ifh.cc/g/cwFGPc.png">
+            <img class="modal-school-img" src="https://ifh.cc/g/h7MlMG.png">
+            <button class="startGame" onclick="location.href='/prob/'">문제 풀기</button>
+    </div>
+</body>
+</html>
