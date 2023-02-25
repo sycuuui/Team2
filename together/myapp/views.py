@@ -14,7 +14,10 @@ def showintro2(request):
     return render(request, 'myapp/intro2.html')
 
 def showgamestart(request):
-    return render(request, 'gamestart.html')
+    person = User()
+    person.univ = request.POST.get('univ_name')
+    person.save()
+    return render(request, 'gameStart.html')
 
 def showuniv(request):
     unives = Univ.objects.all()
