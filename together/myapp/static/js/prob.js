@@ -56,7 +56,7 @@ function timer() {
       //시간초과 modal 생성
       console.log("시간초과!");
       clearInterval(counter);
-      document.querySelector(".modalResult").classList.remove("hiddenResult");
+      document.querySelector(".modalTime").classList.remove("hidden");
     }
 
     return;
