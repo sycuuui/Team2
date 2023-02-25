@@ -80,7 +80,7 @@
         <div class="univ-modal-box">
             <img class="modal-quiz-img" src="https://ifh.cc/g/rh5sfT.png">
             <img class="modal-school-img" src="https://ifh.cc/g/h7MlMG.png">
-            <button class="startGame">문제 풀기</button>
+            <button class="startGame" onclick="location.href='/prob/'">문제 풀기</button>
         </div>
     </div>
     <script>
@@ -91,7 +91,7 @@
             document.querySelector(".modal").classList.add("hidden");
         }
         document.querySelector(".school-univ-name-box").addEventListener("click",open);
-        document.querySelector(".univ-modal-bg").addEventListener("click,close");
+        document.querySelector(".univ-modal-bg").addEventListener("click",close);
     </script>
 </body>
 </html>
