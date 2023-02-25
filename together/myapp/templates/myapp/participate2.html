@@ -65,9 +65,18 @@
                     <h2 style="margin-top:-10px;">{{univ.total_score}}</h2>
                 </div>
                 {% endfor %}
-                <img src="https://ifh.cc/g/pmNnAJ.png" class="univ1">
-                <img src="https://ifh.cc/g/WJxGjA.png" class="univ2">
-                <img src="https://ifh.cc/g/zgWg4x.png" class="univ3">
+                {% for univ in unives2 %}
+                    <img class="univ1" src={{univ.img.url}} class="korea" width="55", height="55">
+                {% endfor %}
+                {% for univ in unives1 %}
+                    <img class="univ2" src={{univ.img.url}} class="korea" width="55", height="55">
+                {% endfor %}
+                {% for univ in unives3 %}
+                    <img class="univ3" src={{univ.img.url}} class="korea" width="55", height="55">
+                {% endfor %}
+                <!-- <img src="{{univ.img.url}}" class="univ1" width="55", height="55">
+                <img src="{{univ.img.url}}" class="univ2" width="55", height="55">
+                <img src="{{univ.img.url}}" class="univ3" width="55", height="55"> -->
                 <img src="https://ifh.cc/g/KzoLW8.png" class="rank">
 
                 {% for univ in unives4 %}

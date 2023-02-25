@@ -65,7 +65,7 @@ def showparticipate2(request):
     unives3 = list(Univ.objects.all().order_by('-total_score'))[2:3]
     unives4 = list(Univ.objects.all().order_by('-total_score'))[3:4]
     unives5 = list(Univ.objects.all().order_by('-total_score'))[5:6]
-    return render(request, 'myapp/participate2.html', {'unives1' : unives1, 'unives2' : unives2, 'unives3' : unives3, 'unives4' : unives4, 'unives5' : unives5})
+    return render(request, 'myapp/participate2.html', {'unives':unives, 'unives1' : unives1, 'unives2' : unives2, 'unives3' : unives3, 'unives4' : unives4, 'unives5' : unives5})
 
 # def quiz(request, pk):
 #     user = get_list_or_404(User, pk=pk)
